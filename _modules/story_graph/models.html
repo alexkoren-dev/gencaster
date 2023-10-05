@@ -1,0 +1,1083 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>story_graph.models &#8212; Gencaster  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/story_graph/models';</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/spiral.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/spiral.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../story_graph.html">Story Graph</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../services.html">Services</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../back/index.html">Caster Back</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../back/osc_server.html">OSC Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../back/graphql.html">GraphQL</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../back/api/index.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../back/api/story_graph.html">Story Graph</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../back/api/stream.html">Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../back/api/gencaster.html">GenCaster Base</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../editor.html">Caster Editor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../front.html">Caster Front</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sound.html">Caster Sound</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../deployment.html">Deployment</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/gencaster/gencaster" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for story_graph.models</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Models</span>
+<span class="sd">======</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">ast</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+
+<span class="kn">from</span> <span class="nn">asgiref.sync</span> <span class="kn">import</span> <span class="n">async_to_sync</span><span class="p">,</span> <span class="n">sync_to_async</span>
+<span class="kn">from</span> <span class="nn">django.core.exceptions</span> <span class="kn">import</span> <span class="n">ValidationError</span>
+<span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span><span class="p">,</span> <span class="n">transaction</span>
+<span class="kn">from</span> <span class="nn">django.db.models</span> <span class="kn">import</span> <span class="n">Q</span><span class="p">,</span> <span class="n">signals</span>
+<span class="kn">from</span> <span class="nn">django.dispatch</span> <span class="kn">import</span> <span class="n">receiver</span>
+<span class="kn">from</span> <span class="nn">django.utils.translation</span> <span class="kn">import</span> <span class="n">gettext</span> <span class="k">as</span> <span class="n">_</span>
+<span class="kn">from</span> <span class="nn">django_stubs_ext.db.models</span> <span class="kn">import</span> <span class="n">TypedModelMeta</span>
+
+<span class="kn">from</span> <span class="nn">gencaster.distributor</span> <span class="kn">import</span> <span class="n">GenCasterChannel</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Graph"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Graph">[docs]</a><span class="k">class</span> <span class="nc">Graph</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A collection of :class:`~Node` and :class:`~Edge`.</span>
+<span class="sd">    This can be considered a score as well as a program as it</span>
+<span class="sd">    has an entry point as a :class:`~Node` and can jump to any</span>
+<span class="sd">    other :class:`~Node`, also allowing for recursive loops/cycles.</span>
+
+<span class="sd">    Each node can be considered a little program on its own which can consist</span>
+<span class="sd">    of multiple :class:`~ScriptCell` which can be coded in a variety of</span>
+<span class="sd">    languages which can control the frontend and the audio (by e.g. speaking</span>
+<span class="sd">    on the stream) or setting a background music.</span>
+
+<span class="sd">    The story graph is a core concept and can be edited with a native editor.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Graph.StreamAssignmentPolicy"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Graph.StreamAssignmentPolicy">[docs]</a>    <span class="k">class</span> <span class="nc">StreamAssignmentPolicy</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TextChoices</span><span class="p">):</span>
+        <span class="n">ONE_GRAPH_ONE_STREAM</span> <span class="o">=</span> <span class="s2">&quot;one_graph_one_stream&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;Each graph has only one stream&quot;</span>
+        <span class="p">)</span>
+        <span class="n">ONE_USER_ONE_STREAM</span> <span class="o">=</span> <span class="s2">&quot;one_user_one_stream&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Each user gets its own stream&quot;</span><span class="p">)</span>
+        <span class="n">DEACTIVATE</span> <span class="o">=</span> <span class="s2">&quot;deactivate&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;No stream assignment&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Graph.GraphDetailTemplate"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Graph.GraphDetailTemplate">[docs]</a>    <span class="k">class</span> <span class="nc">GraphDetailTemplate</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TextChoices</span><span class="p">):</span>
+        <span class="n">DEFAULT</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Default template&quot;</span><span class="p">)</span></div>
+
+    <span class="n">uuid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">UUIDField</span><span class="p">(</span>
+        <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">editable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Name of the graph&quot;</span><span class="p">),</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">display_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Display name&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Will be used as a display name in the frontend&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">slug_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">SlugField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Slug name&quot;</span><span class="p">),</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Will be used as a URL&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">stream_assignment_policy</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Manages the stream assignment for this graph&quot;</span><span class="p">),</span>
+        <span class="n">choices</span><span class="o">=</span><span class="n">StreamAssignmentPolicy</span><span class="o">.</span><span class="n">choices</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">StreamAssignmentPolicy</span><span class="o">.</span><span class="n">ONE_USER_ONE_STREAM</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">public_visible</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Public visible?&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;If the graph is not public it will not be listed in the frontend, yet it is still accessible via URL&quot;</span>
+        <span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">template_name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Frontend template&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;Allows to switch to a different template in the frontend with different connection flows or UI&quot;</span>
+        <span class="p">),</span>
+        <span class="n">choices</span><span class="o">=</span><span class="n">GraphDetailTemplate</span><span class="o">.</span><span class="n">choices</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">GraphDetailTemplate</span><span class="o">.</span><span class="n">DEFAULT</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">start_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Start text (markdown)&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;Text about the graph which will be displayed at the start of a stream - only if this is set&quot;</span>
+        <span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">about_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;About text (markdown)&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;Text about the graph which can be accessed during a stream - only if this is set&quot;</span>
+        <span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">end_text</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;End text (markdown)&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Text which will be displayed at the end of a stream&quot;</span><span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<div class="viewcode-block" id="Graph.aget_entry_node"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Graph.aget_entry_node">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">aget_entry_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Node&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        See :func:`Graph.create_entry_node`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">Node</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">aget</span><span class="p">(</span><span class="n">is_entry_node</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">graph</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Graph.acreate_entry_node"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Graph.acreate_entry_node">[docs]</a>    <span class="k">async</span> <span class="k">def</span> <span class="nf">acreate_entry_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Node&quot;</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Every graph needs a deterministic, unique entry node which is used</span>
+<span class="sd">        to start the iteration over the graph.</span>
+
+<span class="sd">        The creator of the graph is responsible for calling this method</span>
+<span class="sd">        as we can not implicit call it because there are a multitude of</span>
+<span class="sd">        ways of creating a Graph (async (asave), sync (save) or in a bulk where</span>
+<span class="sd">        we do not have a handle at all).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">Node</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">acreate</span><span class="p">(</span>
+            <span class="n">is_entry_node</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">graph</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Start&quot;</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s2">&quot;Graph&quot;</span>
+        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="s2">&quot;Graphs&quot;</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span></div>
+
+
+<span class="k">def</span> <span class="nf">update_graph_db_to_ws</span><span class="p">(</span><span class="n">graph_uuid</span><span class="p">:</span> <span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">):</span>
+    <span class="c1"># sorry for this atrocity - there seems to be race conditions with signals</span>
+    <span class="c1"># which makes updates out-dated, see</span>
+    <span class="c1"># https://docs.djangoproject.com/en/dev/topics/db/transactions/#performing-actions-after-commit</span>
+    <span class="n">transaction</span><span class="o">.</span><span class="n">on_commit</span><span class="p">(</span>
+        <span class="k">lambda</span><span class="p">:</span> <span class="n">async_to_sync</span><span class="p">(</span><span class="n">GenCasterChannel</span><span class="o">.</span><span class="n">send_graph_update</span><span class="p">)(</span><span class="n">graph_uuid</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">Graph</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;update_graph_ws&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_graph_ws</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">Graph</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">update_graph_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Node"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Node">[docs]</a><span class="k">class</span> <span class="nc">Node</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A node.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">uuid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">UUIDField</span><span class="p">(</span>
+        <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">editable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Name&quot;</span><span class="p">),</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Name of the node&quot;</span><span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">color</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;HEX color of the node in graph canvas&quot;</span><span class="p">),</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;#fff&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">position_x</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">FloatField</span><span class="p">(</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;x-Position in graph canvas&quot;</span><span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">position_y</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">FloatField</span><span class="p">(</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;y-Position in graph canvas&quot;</span><span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">graph</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+        <span class="n">Graph</span><span class="p">,</span>
+        <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;nodes&quot;</span><span class="p">,</span>
+        <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">is_entry_node</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="s2">&quot;Is Entry node?&quot;</span><span class="p">,</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;Acts as a singular entrypoint for our graph.&quot;</span>
+            <span class="s2">&quot;Only one such node can exist per graph.&quot;</span>
+        <span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">is_blocking_node</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="s2">&quot;Is blocking node?&quot;</span><span class="p">,</span>
+        <span class="n">help_text</span><span class="o">=</span><span class="n">_</span><span class="p">(</span>
+            <span class="s2">&quot;If we encounter this node during graph execution we will halt execution indefinitely on this node. This is useful if we have setup a state and do not want to change it anymore.&quot;</span>
+        <span class="p">),</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">aget_default_out_door</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;NodeDoor&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">sync_to_async</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_default_out_door</span><span class="p">)()</span>
+
+    <span class="k">def</span> <span class="nf">get_default_out_door</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;NodeDoor&quot;</span><span class="p">:</span>
+        <span class="n">default_out_door</span> <span class="o">=</span> <span class="n">NodeDoor</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="n">node</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+            <span class="n">door_type</span><span class="o">=</span><span class="n">NodeDoor</span><span class="o">.</span><span class="n">DoorType</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">,</span>
+            <span class="n">is_default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">default_out_door</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">NodeDoorMissing</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Default out door for node </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2"> is missing&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">default_out_door</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">aget_default_in_door</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;NodeDoor&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="k">await</span> <span class="n">sync_to_async</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_default_in_door</span><span class="p">)()</span>
+
+    <span class="k">def</span> <span class="nf">get_default_in_door</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;NodeDoor&quot;</span><span class="p">:</span>
+        <span class="n">default_in_door</span> <span class="o">=</span> <span class="n">NodeDoor</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="n">node</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+            <span class="n">door_type</span><span class="o">=</span><span class="n">NodeDoor</span><span class="o">.</span><span class="n">DoorType</span><span class="o">.</span><span class="n">INPUT</span><span class="p">,</span>
+            <span class="n">is_default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">default_in_door</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">NodeDoorMissing</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Default in door for node </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2"> is missing&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">default_in_door</span>
+
+<div class="viewcode-block" id="Node.save"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Node.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">create_default_doors</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_state</span><span class="o">.</span><span class="n">adding</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">create_default_doors</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">NodeDoor</span><span class="o">.</span><span class="n">DoorType</span><span class="p">:</span>
+                <span class="n">NodeDoor</span><span class="p">(</span>
+                    <span class="n">node</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
+                    <span class="n">door_type</span><span class="o">=</span><span class="n">t</span><span class="p">,</span>
+                    <span class="n">is_default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">code</span><span class="o">=</span><span class="s2">&quot;True&quot;</span><span class="p">,</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">()</span></div>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;graph&quot;</span><span class="p">]</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">UniqueConstraint</span><span class="p">(</span>
+                <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;graph&quot;</span><span class="p">],</span>
+                <span class="n">condition</span><span class="o">=</span><span class="n">Q</span><span class="p">(</span><span class="n">is_entry_node</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;unique_entry_point&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span></div>
+
+
+<span class="k">def</span> <span class="nf">update_node_db_to_ws</span><span class="p">(</span><span class="n">node_uuid</span><span class="p">:</span> <span class="n">uuid</span><span class="o">.</span><span class="n">UUID</span><span class="p">):</span>
+    <span class="c1"># sorry for this atrocity - there seems to be race conditions with signals</span>
+    <span class="c1"># which makes updates out-dated, see</span>
+    <span class="c1"># https://docs.djangoproject.com/en/dev/topics/db/transactions/#performing-actions-after-commit</span>
+    <span class="n">transaction</span><span class="o">.</span><span class="n">on_commit</span><span class="p">(</span>
+        <span class="k">lambda</span><span class="p">:</span> <span class="n">async_to_sync</span><span class="p">(</span><span class="n">GenCasterChannel</span><span class="o">.</span><span class="n">send_node_update</span><span class="p">)(</span><span class="n">node_uuid</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_delete</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">Node</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;delete_node_ws&quot;</span><span class="p">)</span>
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">Node</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;update_node_ws&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_node_ws</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">Node</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">update_node_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+    <span class="n">update_graph_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="NodeDoorMissing"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.NodeDoorMissing">[docs]</a><span class="k">class</span> <span class="nc">NodeDoorMissing</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Exception that can be thrown if a node door is missing.</span>
+<span class="sd">    Normally each node should have a default in- and out</span>
+<span class="sd">    :class:`~NodeDoor` via a signal, but as this is not forced</span>
+<span class="sd">    via the database it is necessary to check for it.</span>
+<span class="sd">    In case this check fails, this exception can be raised.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="NodeDoor"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.NodeDoor">[docs]</a><span class="k">class</span> <span class="nc">NodeDoor</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A :class:`~Node` can be entered and exited via</span>
+<span class="sd">    multiple paths, where each of these exits and</span>
+<span class="sd">    entrances is called a *door*.</span>
+
+<span class="sd">    A connection between nodes can only be made via their</span>
+<span class="sd">    doors.</span>
+<span class="sd">    There are two types of doors:</span>
+
+<span class="sd">    .. list-table:: Door types</span>
+<span class="sd">        :header-rows: 1</span>
+
+<span class="sd">        * - Kind</span>
+<span class="sd">          - Description</span>
+<span class="sd">        * - **INPUT**</span>
+<span class="sd">          - Allows to enter a node.</span>
+<span class="sd">            Currently each Node only has one entry point</span>
+<span class="sd">            but for future development and a nicer</span>
+<span class="sd">            database operations it is also represented.</span>
+<span class="sd">        * - **OUTPUT**</span>
+<span class="sd">          - Allows to exit a node.</span>
+<span class="sd">            After all script cells of a node has been</span>
+<span class="sd">            executed, the condition of each door will</span>
+<span class="sd">            be evaluated (like in a switch case).</span>
+<span class="sd">            Once a condition has been met, the door</span>
+<span class="sd">            will be stepped through.</span>
+<span class="sd">            This allows to have a visual representation</span>
+<span class="sd">            of logic branches.</span>
+
+<span class="sd">    It is only possible to connect an **OUTPUT** to an</span>
+<span class="sd">    **INPUT** door via an :class:`~Edge`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="NodeDoor.DoorType"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.NodeDoor.DoorType">[docs]</a>    <span class="k">class</span> <span class="nc">DoorType</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TextChoices</span><span class="p">):</span>
+        <span class="n">INPUT</span> <span class="o">=</span> <span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Input&quot;</span><span class="p">)</span>
+        <span class="n">OUTPUT</span> <span class="o">=</span> <span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;output&quot;</span><span class="p">)</span></div>
+
+    <span class="n">uuid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">UUIDField</span><span class="p">(</span>
+        <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">editable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">door_type</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">choices</span><span class="o">=</span><span class="n">DoorType</span><span class="o">.</span><span class="n">choices</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">DoorType</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">node</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+        <span class="n">to</span><span class="o">=</span><span class="n">Node</span><span class="p">,</span>
+        <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+        <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;node_doors&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">order</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">is_default</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">code</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="c1"># only here for type-hints on reverse-relations</span>
+    <span class="n">out_edges</span><span class="p">:</span> <span class="n">models</span><span class="o">.</span><span class="n">QuerySet</span><span class="p">[</span><span class="s2">&quot;Edge&quot;</span><span class="p">]</span>
+    <span class="n">in_edges</span><span class="p">:</span> <span class="n">models</span><span class="o">.</span><span class="n">QuerySet</span><span class="p">[</span><span class="s2">&quot;Edge&quot;</span><span class="p">]</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">(</span><span class="n">TypedModelMeta</span><span class="p">):</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;node&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;is_default&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;order&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+        <span class="n">verbose_name</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Node door&quot;</span><span class="p">)</span>
+        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Node doors&quot;</span><span class="p">)</span>
+
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">UniqueConstraint</span><span class="p">(</span>
+                <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">,</span> <span class="s2">&quot;door_type&quot;</span><span class="p">],</span>
+                <span class="c1"># see https://stackoverflow.com/a/72586940</span>
+                <span class="n">condition</span><span class="o">=</span><span class="n">Q</span><span class="p">(</span><span class="n">is_default</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;unique_default_per_type_and_node&quot;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">]</span>
+
+<div class="viewcode-block" id="NodeDoor.save"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.NodeDoor.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">SyntaxError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Syntax error on node door </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">e</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unexpected error on saving </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">e</span>
+        <span class="c1"># ignore args/kwargs b/c of &quot;Cannot force both insert and updating in model saving&quot; problem</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">save</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">door_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">NodeDoor</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;update_node_door_ws&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_node_door_ws</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">NodeDoor</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">update_graph_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+    <span class="n">update_node_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_delete</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">NodeDoor</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;delete_node_door_ws&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">delete_node_door_ws</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">update_node_door_ws</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Edge"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Edge">[docs]</a><span class="k">class</span> <span class="nc">Edge</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Connects two :class:`~Node` with each other by</span>
+<span class="sd">    using their respective :class:`~NodeDoor`.</span>
+
+<span class="sd">    .. important::</span>
+
+<span class="sd">        It is important to note that an edge flows from</span>
+<span class="sd">        ``out_node_door`` to ``in_node_door`` as we follow</span>
+<span class="sd">        the notion from the perspective of a</span>
+<span class="sd">        :class:`story_graph.models.Node` rather than from the</span>
+<span class="sd">        edge.</span>
+
+
+<span class="sd">    .. graphviz::</span>
+
+<span class="sd">        digraph Connection {</span>
+<span class="sd">            rank = same;</span>
+<span class="sd">            subgraph cluster_node_a {</span>
+<span class="sd">                rank = same;</span>
+<span class="sd">                label = &quot;NODE_A&quot;;</span>
+<span class="sd">                NODE_A [shape=Msquare, label=&quot;NODE_A\\n\\nscript_cell_1\\nscript_cell_2&quot;];</span>
+<span class="sd">                subgraph cluster_in_nodes_a {</span>
+<span class="sd">                    label = &quot;IN_NODES&quot;;</span>
+<span class="sd">                    in_node_door_a [label=&quot;in_node_door&quot;];</span>
+<span class="sd">                }</span>
+<span class="sd">                subgraph cluster_out_nodes_a {</span>
+<span class="sd">                    label = &quot;OUT_NODES&quot;;</span>
+<span class="sd">                    out_node_door_a_1 [label=&quot;out_node_door 1&quot;];</span>
+<span class="sd">                    out_node_door_a_2 [label=&quot;out_node_door 2&quot;];</span>
+<span class="sd">                }</span>
+<span class="sd">                in_node_door_a -&gt; NODE_A [label=&quot;DB\\nreference&quot;];</span>
+<span class="sd">                {out_node_door_a_1, out_node_door_a_2} -&gt; NODE_A;</span>
+<span class="sd">                in_node_door_a -&gt; NODE_A [style=dashed, color=red, fontcolor=red, label=&quot;Engine\\nProgression&quot;];</span>
+<span class="sd">                NODE_A -&gt; out_node_door_a_1 [style=dashed, color=red];</span>
+<span class="sd">            }</span>
+
+<span class="sd">            edge_ [shape=Msquare, label=&quot;EDGE&quot;];</span>
+<span class="sd">            edge_ -&gt; out_node_door_a_1 [label=&quot;out_node_door&quot;];</span>
+<span class="sd">            edge_ -&gt; in_node_door_b [label=&quot;in_node_door&quot;];</span>
+<span class="sd">            out_node_door_a_1 -&gt; edge_ [style=dashed, color=red];</span>
+<span class="sd">            edge_ -&gt; in_node_door_b [style=dashed, color=red];</span>
+
+<span class="sd">            subgraph cluster_node_b {</span>
+<span class="sd">                rank = same;</span>
+<span class="sd">                label = &quot;NODE_B&quot;;</span>
+<span class="sd">                NODE_B [shape=Msquare];</span>
+<span class="sd">                subgraph cluster_in_nodes_b {</span>
+<span class="sd">                    label = &quot;IN_NODES&quot;;</span>
+<span class="sd">                    in_node_door_b [label=&quot;in_node_door&quot;];</span>
+<span class="sd">                }</span>
+<span class="sd">                subgraph cluster_out_nodes_b {</span>
+<span class="sd">                    label = &quot;OUT_NODES&quot;;</span>
+<span class="sd">                    out_node_door_b_1 [label=&quot;out_node_door 1&quot;];</span>
+<span class="sd">                    out_node_door_b_2 [label=&quot;out_node_door 2&quot;];</span>
+<span class="sd">                }</span>
+<span class="sd">                in_node_door_b -&gt; NODE_B;</span>
+<span class="sd">                {out_node_door_b_1, out_node_door_b_2} -&gt; NODE_B;</span>
+<span class="sd">                in_node_door_b -&gt; NODE_B [style=dashed, color=red];</span>
+<span class="sd">                NODE_B -&gt; out_node_door_b_1 [style=dashed, color=red];</span>
+<span class="sd">            }</span>
+<span class="sd">        }</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">uuid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">UUIDField</span><span class="p">(</span>
+        <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">editable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">in_node_door</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+        <span class="n">NodeDoor</span><span class="p">,</span>
+        <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;in_edges&quot;</span><span class="p">,</span>
+        <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+        <span class="c1"># this should not be none but as we</span>
+        <span class="c1"># added it during the lifecycle of</span>
+        <span class="c1"># gencaster it is optional as otherwise</span>
+        <span class="c1"># all prior data has to be deleted</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">out_node_door</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+        <span class="n">NodeDoor</span><span class="p">,</span>
+        <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;out_edges&quot;</span><span class="p">,</span>
+        <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+        <span class="c1"># see in_node_door</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+<div class="viewcode-block" id="Edge.save"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.Edge.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Checks if ``in_node_door`` and ``out_node_door`` have their</span>
+<span class="sd">        respective types in order to avoid any *wrong* directions within</span>
+<span class="sd">        our graph.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_node_door</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_node_door</span><span class="o">.</span><span class="n">door_type</span> <span class="o">!=</span> <span class="n">NodeDoor</span><span class="o">.</span><span class="n">DoorType</span><span class="o">.</span><span class="n">INPUT</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;in_node_door needs to be an input door&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_node_door</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_node_door</span><span class="o">.</span><span class="n">door_type</span> <span class="o">!=</span> <span class="n">NodeDoor</span><span class="o">.</span><span class="n">DoorType</span><span class="o">.</span><span class="n">OUTPUT</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;out_node_door needs to be an output door&quot;</span><span class="p">))</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">(</span><span class="n">TypedModelMeta</span><span class="p">):</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">UniqueConstraint</span><span class="p">(</span>
+                <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;in_node_door&quot;</span><span class="p">,</span> <span class="s2">&quot;out_node_door&quot;</span><span class="p">],</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;unique_edge&quot;</span><span class="p">,</span>
+            <span class="p">),</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">in_node_door</span><span class="si">}</span><span class="s2"> -&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">out_node_door</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">pre_delete</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">Edge</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;delete_edge_ws&quot;</span><span class="p">)</span>
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">Edge</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;update_edge_ws&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_edge_ws</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">Edge</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">instance</span><span class="o">.</span><span class="n">out_node_door</span><span class="p">:</span>
+        <span class="n">update_graph_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">out_node_door</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+        <span class="n">update_node_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">out_node_door</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">instance</span><span class="o">.</span><span class="n">in_node_door</span><span class="p">:</span>
+        <span class="n">update_node_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">in_node_door</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="AudioCell"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.AudioCell">[docs]</a><span class="k">class</span> <span class="nc">AudioCell</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Stores information for playback of static audio files.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="AudioCell.PlaybackChoices"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.AudioCell.PlaybackChoices">[docs]</a>    <span class="k">class</span> <span class="nc">PlaybackChoices</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TextChoices</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Different kinds of playback.</span>
+
+<span class="sd">        .. list-table:: Playback types</span>
+<span class="sd">            :header-rows: 1</span>
+
+<span class="sd">            * - Name</span>
+<span class="sd">              - Description</span>
+<span class="sd">            * - ``SYNC``</span>
+<span class="sd">              - Plays back an audio file and waits for the</span>
+<span class="sd">                playback to finish before continuing the</span>
+<span class="sd">                execution of the script cells.</span>
+<span class="sd">            * - ``ASYNC``</span>
+<span class="sd">              - Plays back an audio file and immediately</span>
+<span class="sd">                continues the execution of script cells.</span>
+<span class="sd">                This is fitting for e.g. background music.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">SYNC_PLAYBACK</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sync_playback&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Sync playback&quot;</span><span class="p">)]</span>
+        <span class="n">ASYNC_PLAYBACK</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;async_playback&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Async playback&quot;</span><span class="p">)]</span></div>
+
+    <span class="n">uuid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">UUIDField</span><span class="p">(</span>
+        <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">editable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">playback</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+        <span class="n">choices</span><span class="o">=</span><span class="n">PlaybackChoices</span><span class="o">.</span><span class="n">choices</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">PlaybackChoices</span><span class="o">.</span><span class="n">SYNC_PLAYBACK</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">audio_file</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+        <span class="s2">&quot;stream.AudioFile&quot;</span><span class="p">,</span>
+        <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+        <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;audio_cells&quot;</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">volume</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">FloatField</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">audio_file</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">playback</span><span class="si">}</span><span class="s2">)&quot;</span></div>
+
+
+<div class="viewcode-block" id="CellType"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.CellType">[docs]</a><span class="k">class</span> <span class="nc">CellType</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">TextChoices</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A :class:`~story_graph.models.ScriptCell` can contain</span>
+<span class="sd">    different types of code, each with unique functionality.</span>
+
+<span class="sd">    Both, the database and :class:`~story_graph.engine.Engine`,</span>
+<span class="sd">    implement some specific details according to these types.</span>
+
+<span class="sd">    .. list-table:: Cell types</span>
+<span class="sd">        :header-rows: 1</span>
+
+<span class="sd">        * - Name</span>
+<span class="sd">          - Description</span>
+<span class="sd">          - Database</span>
+<span class="sd">          - Engine</span>
+<span class="sd">        * - Markdown</span>
+<span class="sd">          - Allows to write arbitrary text which will get</span>
+<span class="sd">            rendered as an audio file via a text to speech service,</span>
+<span class="sd">            see :class:`~stream.models.TextToSpeech` for conversion</span>
+<span class="sd">            and :class:`~story_graph.markdown_parser.GencasterRenderer`</span>
+<span class="sd">            for the extended Markdown syntax.</span>
+<span class="sd">          - - :class:`~stream.models.TextToSpeech`</span>
+<span class="sd">          - - :func:`~story_graph.engine.Engine.execute_markdown_code`</span>
+<span class="sd">            - :class:`~story_graph.markdown_parser.GencasterRenderer`</span>
+<span class="sd">        * - Python</span>
+<span class="sd">          - Allows to execute python code via :func:`exec` which allows</span>
+<span class="sd">            to trigger e.g. Dialogs in the frontend</span>
+<span class="sd">            (see :class:`~stream.frontend_types.Dialog`)</span>
+<span class="sd">            or calculate or fetch any kind of data and store its value</span>
+<span class="sd">            as a :class:`~stream.models.StreamVariable`.</span>
+<span class="sd">          -</span>
+<span class="sd">          - - :func:`~story_graph.engine.Engine.execute_python_cell`</span>
+<span class="sd">        * - SuperCollider</span>
+<span class="sd">          - Executes *sclang* code on the associated server.</span>
+<span class="sd">            This can be used to control the sonic content on the server.</span>
+<span class="sd">          - - :class:`~stream.models.StreamInstruction`</span>
+<span class="sd">          - - :func:`~story_graph.engine.Engine.execute_sc_code`</span>
+<span class="sd">            - :ref:`OSC Server`</span>
+<span class="sd">        * - Comment</span>
+<span class="sd">          - Does not get executed, but allows to put comments into</span>
+<span class="sd">            the graph.</span>
+<span class="sd">          -</span>
+<span class="sd">          -</span>
+<span class="sd">        * - Audio</span>
+<span class="sd">          - Allows to playback static audio files.</span>
+<span class="sd">            The instruction will be translated into *sclang* code and will</span>
+<span class="sd">            be executed as such on the associated stream.</span>
+<span class="sd">          - - :class:`~story_graph.models.AudioCell`</span>
+<span class="sd">            - :class:`~stream.models.AudioFile`</span>
+<span class="sd">          - - :func:`~story_graph.engine.Engine.execute_audio_cell`</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">MARKDOWN</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;markdown&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Markdown&quot;</span><span class="p">)]</span>
+    <span class="n">PYTHON</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">)]</span>
+    <span class="n">SUPERCOLLIDER</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;supercollider&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;SuperCollider&quot;</span><span class="p">)]</span>
+    <span class="n">COMMENT</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;comment&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Comment&quot;</span><span class="p">)]</span>
+    <span class="n">AUDIO</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;audio&quot;</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Audio&quot;</span><span class="p">)]</span></div>
+
+
+<div class="viewcode-block" id="ScriptCell"><a class="viewcode-back" href="../../back/api/story_graph.html#story_graph.models.ScriptCell">[docs]</a><span class="k">class</span> <span class="nc">ScriptCell</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Stores a script which can be executed</span>
+<span class="sd">    with our :class:`~story_graph.engine.Engine` on a</span>
+<span class="sd">    :class:`~stream.models.Stream`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">uuid</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">UUIDField</span><span class="p">(</span>
+        <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">editable</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">,</span>
+        <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">node</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span>
+        <span class="n">Node</span><span class="p">,</span>
+        <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;script_cells&quot;</span><span class="p">,</span>
+        <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">cell_type</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span>
+        <span class="n">max_length</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span>
+        <span class="n">choices</span><span class="o">=</span><span class="n">CellType</span><span class="o">.</span><span class="n">choices</span><span class="p">,</span>
+        <span class="n">default</span><span class="o">=</span><span class="n">CellType</span><span class="o">.</span><span class="n">COMMENT</span><span class="p">,</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Cell type&quot;</span><span class="p">),</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">cell_code</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span>
+        <span class="n">verbose_name</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Cell code&quot;</span><span class="p">),</span>
+    <span class="p">)</span>
+
+    <span class="n">cell_order</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">audio_cell</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">OneToOneField</span><span class="p">(</span>
+        <span class="n">AudioCell</span><span class="p">,</span>
+        <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span>
+        <span class="n">related_name</span><span class="o">=</span><span class="s2">&quot;script_cell&quot;</span><span class="p">,</span>
+        <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="c1"># ordering by uuid provides a deterministic order</span>
+        <span class="c1"># in case cell_order is not unique</span>
+        <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;node&quot;</span><span class="p">,</span> <span class="s2">&quot;cell_order&quot;</span><span class="p">,</span> <span class="s2">&quot;uuid&quot;</span><span class="p">]</span>
+        <span class="n">constraints</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">models</span><span class="o">.</span><span class="n">CheckConstraint</span><span class="p">(</span>
+                <span class="n">check</span><span class="o">=</span><span class="n">Q</span><span class="p">(</span><span class="n">cell_type</span><span class="o">=</span><span class="n">CellType</span><span class="o">.</span><span class="n">AUDIO</span><span class="p">,</span> <span class="n">audio_cell__isnull</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+                <span class="o">|</span> <span class="o">~</span><span class="n">Q</span><span class="p">(</span><span class="n">cell_type</span><span class="o">=</span><span class="n">CellType</span><span class="o">.</span><span class="n">AUDIO</span><span class="p">),</span>
+                <span class="n">name</span><span class="o">=</span><span class="s2">&quot;audio_type_needs_audio_cell_information&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">node</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cell_order</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cell_type</span><span class="si">}</span><span class="s2">)&quot;</span></div>
+
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_delete</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">ScriptCell</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;delete_script_cell&quot;</span><span class="p">)</span>
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">signals</span><span class="o">.</span><span class="n">post_save</span><span class="p">,</span> <span class="n">sender</span><span class="o">=</span><span class="n">ScriptCell</span><span class="p">,</span> <span class="n">dispatch_uid</span><span class="o">=</span><span class="s2">&quot;update_script_cell_ws&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">update_script_cell_ws</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">ScriptCell</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">update_node_db_to_ws</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">uuid</span><span class="p">)</span>
+</pre></div>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Gencaster
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023 Vinzenz Aubry and Dennis Scheiba.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
