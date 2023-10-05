@@ -21,7 +21,7 @@
     "@unhead/vue": "^1.7.4",
     "@urql/vue": "^1.0.4",
     "element-plus": "^2.3.5",
-    "graphql": "^16.6.0",
+    "graphql": "^16.8.1",
     "markdown-it": "^13.0.1",
     "pinia": "^2.1.6",
     "sass": "^1.62.0",
